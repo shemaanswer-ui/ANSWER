@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shema Answer — Portfolio</title>
+  <meta name="description" content="Portfolio of Shema Answer — web developer & designer.">
+
+  <style>
+  :root{
+    --maxw:1100px;
+    --accent:#2563eb;
+    --muted:#6b7280;
+    --bg:#ffffff;
+    --card:#f8fafc;
+    --radius:12px;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:#111827;line-height:1.45}
+  .container{max-width:var(--maxw);margin:0 auto;padding:28px}
+  .site-header{border-bottom:1px solid #e6e9ee;background:white;position:sticky;top:0;z-index:8}
+  .header-inner{display:flex;align-items:center;justify-content:space-between}
+  .logo{font-size:1.1rem;margin:0;padding:12px 0}
+  .nav{display:flex;gap:16px}
+  .nav a{color:var(--muted);text-decoration:none;padding:12px 6px;border-radius:8px}
+  .nav a:hover{color:var(--accent)}
+  .nav-toggle{display:none;background:none;border:0;font-size:20px}
+
+  .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:center;padding:48px 0}
+  .hero h2{font-size:2rem;margin:0 0 12px}
+  .accent{color:var(--accent)}
+  .hero p{color:var(--muted);margin:0 0 12px}
+  .hero-card{background:var(--card);border-radius:var(--radius);padding:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(20,30,60,0.06)}
+
+  .about, .projects, .contact{padding:32px 0;border-top:1px solid #eef2f6}
+  .skills{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;list-style:none;padding:0}
+  .skills li{background:#f1f5f9;padding:8px 12px;border-radius:999px;color:#374151;font-size:0.95rem}
+
+  .project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:16px}
+  .project{background:#fff;padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(20,30,60,0.04)}
+  .project h4{margin:0 0 8px}
+
+  .contact form{max-width:540px;display:grid;gap:10px}
+  .contact label{display:block}
+  .contact input, .contact textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ee}
+  .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;border:0;cursor:pointer}
+  .btn-outline{background:transparent;border:1px solid #e6e9ee;color:var(--accent)}
+  .link{color:var(--accent);text-decoration:none}
+
+  .site-footer{border-top:1px solid #eef2f6;padding:18px 0;margin-top:40px;color:var(--muted)}
+  .small{font-size:0.9rem;color:var(--muted)}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr}
+    .nav{display:none}
+    .nav-toggle{display:block}
+  }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Shema Answer</h1>
+      <nav class="nav" id="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-text">
+        <h2>Hi — I'm <span class="accent">Shema</span>.</h2>
+        <p>I'm a web developer who builds clean, modern websites and interactive experiences. Welcome to my portfolio.</p>
+        <p class="cta-row">
+          <a class="btn" href="#projects">View projects</a>
+          <a class="btn btn-outline" href="Shema-Resume.pdf" download>Download Resume</a>
+        </p>
+      </div>
+      <div class="hero-card">
+        <svg width="320" height="220" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Portrait placeholder">
+          <rect width="320" height="220" rx="12" fill="#f3f4f6"/>
+          <g transform="translate(40,30)" fill="#e6eef8">
+            <circle cx="120" cy="70" r="48"/>
+            <rect x="0" y="140" width="240" height="22" rx="6"/>
+            <rect x="0" y="170" width="180" height="12" rx="6"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h3>About me</h3>
+      <p>I design and build projects using HTML, CSS, and JavaScript. I enjoy turning ideas into beautiful and usable websites. I am currently learning more about backend development and modern frameworks.</p>
+      <ul class="skills">
+        <li>HTML & CSS</li>
+        <li>JavaScript (ES6+)</li>
+        <li>Responsive design</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="container projects">
+      <h3>Selected projects</h3>
+      <div class="project-grid">
+        <article class="project">
+          <h4>Project One — Landing Page</h4>
+          <p>Responsive landing page with CSS grid and accessibility features.</p>
+          <p><a class="link" href="#">Live demo / Repo</a></p>
+        </article>
+
+        <article class="project">
+          <h4>Project Two — JavaScript App</h4>
+          <p>A small single-page app demonstrating DOM manipulation and state management.</p>
+          <p><a class="link" href="#">Live demo / Repo</a></p>
+        </article>
+
+        <article class="project">
+          <h4>Project Three — Gallery</h4>
+          <p>Interactive image gallery with keyboard navigation.</p>
+          <p><a class="link" href="#">Live demo / Repo</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h3>Contact</h3>
+      <p>If you'd like to work together or ask a question, send an email or use the contact form below.</p>
+
+      <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="_replyto" required>
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit" class="btn">Send</button>
+      </form>
+
+      <p class="small">Or email directly: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Shema Answer — Built with ❤️</p>
+      <p class="small">Host with <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></p>
+    </div>
+  </footer>
+
+  <script>
+  // Mobile nav toggle
+  document.getElementById('nav-toggle').addEventListener('click', function(){
+    const nav = document.getElementById('nav');
+    if (!nav) return;
+    if (nav.style.display === 'flex') {
+      nav.style.display = 'none';
+    } else {
+      nav.style.display = 'flex';
+      nav.style.flexDirection = 'column';
+      nav.style.gap = '10px';
+    }
+  });
+
+  // Simple form handler
+  document.getElementById('contact-form').addEventListener('submit', function(e){
+    if (location.hostname === 'localhost' || location.protocol === 'file:') {
+      e.preventDefault();
+      alert('Thanks! This would send your message in a live site.');
+      this.reset();
+    }
+  });
+  </script>
+</body>
+</html>
